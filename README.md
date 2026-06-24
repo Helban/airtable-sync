@@ -2,8 +2,10 @@
 
 Push scraped or monitored data into an Airtable base with change-aware upsert.
 
-**Live demo:** https://airtable.com/appLRSprzirec0S5h/shrFbmtpNMrjxDG3H — the top 20
-crypto prices, written and kept current by this connector.
+**Live demo:** https://airtable.com/appLRSprzirec0S5h/shrFbmtpNMrjxDG3H (the top 20
+crypto prices, written and kept current by this connector).
+
+![The Crypto demo base, populated and kept current by the connector](demo.png)
 
 Most "send data to Airtable" scripts either append a fresh copy every run (duplicates)
 or rewrite every record (needless writes, a polluted revision history, and API rate
@@ -13,12 +15,12 @@ identical rows skipped.
 
 ## What's included
 
-- `airtable_sync.py` — the reusable connector (`AirtableSync`, `SyncReport`). Drop it into any project.
-- `crypto_monitor.py` — a working demo: pulls the top 20 coins from CoinGecko and syncs them into Airtable.
-- `setup_table.py` — creates the demo table and its typed columns through the Airtable metadata API, so you don't set fields up by hand.
-- `crypto_schema.py` — field layout shared by the setup script and the monitor.
-- `config.py` — loads credentials from `.env`.
-- `test_airtable_sync.py` — unit tests for the connector, no network.
+- `airtable_sync.py`: the reusable connector (`AirtableSync`, `SyncReport`). Drop it into any project.
+- `crypto_monitor.py`: a working demo that pulls the top 20 coins from CoinGecko and syncs them into Airtable.
+- `setup_table.py`: creates the demo table and its typed columns through the Airtable metadata API, so you don't set fields up by hand.
+- `crypto_schema.py`: field layout shared by the setup script and the monitor.
+- `config.py`: loads credentials from `.env`.
+- `test_airtable_sync.py`: unit tests for the connector, no network.
 
 ## How the connector works
 
