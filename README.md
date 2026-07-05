@@ -74,3 +74,7 @@ venv/bin/python -m pytest
 Point `crypto_monitor.py` at your own source: replace `fetch_top_coins` and
 `to_airtable_row`, set `key_field` to whatever uniquely identifies a row (an email,
 an order id, a SKU), and adjust the columns in `crypto_schema.py`.
+
+---
+
+Built by Adam Kramarczyk. More Python tools and live demos at [helban.dev](https://helban.dev).
